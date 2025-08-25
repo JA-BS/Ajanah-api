@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Put } from '@nestjs/common';
 import { UserService } from './user.service';
 
 
@@ -10,4 +10,8 @@ export class UserController {
   getHello(): string {
     return this.userService.getHello();
   }
+    @Put("Update")
+      update(): string {
+    return this.userService.updateUsers();
+    }
 }
