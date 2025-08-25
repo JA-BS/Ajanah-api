@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -7,6 +8,10 @@ export class UserService {
   }
   register(): string {
     return 'Registration successful!';
+  }
+
+  updateUser(): string {
+    return 'User information updated successfully';
   }
 }
 
