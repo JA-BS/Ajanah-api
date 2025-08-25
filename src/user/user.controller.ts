@@ -1,4 +1,5 @@
 
+
 import { Controller, Get, Post } from '@nestjs/common';
 
 import { UserService } from './user.service';
@@ -12,6 +13,12 @@ export class UserController {
     return this.userService.getHello();
   }
 
+    @Put("Update")
+      update(): string {
+    return this.userService.updateUsers();
+    }
+
+
 
   @Patch("update-info")
 updateUser(): string {
@@ -22,5 +29,6 @@ updateUser(): string {
     register(): string {
         return this.userService.register();
     }
+
 
 }

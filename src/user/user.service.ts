@@ -13,5 +13,11 @@ export class UserService {
   updateUser(): string {
     return 'User information updated successfully';
   }
+  
+
+  updateUsers():string{
+    return 'update successful';
+  }
+
 }
 
