@@ -1,5 +1,6 @@
 
 
+
 import { Controller, Get, Post } from '@nestjs/common';
 
 import { UserService } from './user.service';
@@ -11,6 +12,12 @@ export class UserController {
   @Get()
   getHello(): string {
     return this.userService.getHello();
+  }
+
+
+  @Delete()
+  deleteUser(): string{
+    return this.userService.deleteUser();
   }
 
 
@@ -36,6 +43,7 @@ updateUser(): string {
     register(): string {
         return this.userService.register();
     }
+
 
 
 

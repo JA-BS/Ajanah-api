@@ -8,6 +8,11 @@ export class UserService {
   }
 
 
+  deleteUser(): string{
+    return 'Delete succesfull'
+  }
+
+
 getUsers(): string {
   return "this are the users"
 }
