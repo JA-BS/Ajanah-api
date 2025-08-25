@@ -1,8 +1,8 @@
-import { Controller, Get } from '@nestjs/common';
+/* eslint-disable prettier/prettier */
+import { Controller, Get, Patch } from '@nestjs/common';
 import { UserService } from './user.service';
 
-
-@Controller("user")
+@Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -10,4 +10,9 @@ export class UserController {
   getHello(): string {
     return this.userService.getHello();
   }
+
+  @Patch("update-info")
+updateUser(): string {
+  return this.userService.updateUser();
+}
 }
