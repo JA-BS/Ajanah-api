@@ -10,4 +10,10 @@ export class UserController {
   getHello(): string {
     return this.userService.getHello();
   }
+
+  
+  @Get('all-users')
+  getusers(): string {
+    return this.userService.getUsers();
+  }
 }
