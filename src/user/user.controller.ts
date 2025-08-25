@@ -13,6 +13,13 @@ export class UserController {
     return this.userService.getHello();
   }
 
+
+  
+  @Get('all-users')
+  getusers(): string {
+    return this.userService.getUsers();
+  }
+
     @Put("Update")
       update(): string {
     return this.userService.updateUsers();
@@ -29,6 +36,7 @@ updateUser(): string {
     register(): string {
         return this.userService.register();
     }
+
 
 
 }

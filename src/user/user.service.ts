@@ -6,6 +6,12 @@ export class UserService {
   getHello(): string {
     return 'Hello World!';
   }
+
+
+getUsers(): string {
+  return "this are the users"
+}
+
   register(): string {
     return 'Registration successful!';
   }
@@ -18,6 +24,7 @@ export class UserService {
   updateUsers():string{
     return 'update successful';
   }
+
 
 }
 
