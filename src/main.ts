@@ -7,14 +7,14 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Ajanah-api')
-    .setDescription('The Ajanah API description')
+    .setTitle('Cats example')
+    .setDescription('The cats API description')
     .setVersion('1.0')
-    .addTag('ajanah')
+    .addTag('cats')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, documentFactory);
 
-  await app.listen( 3000);
+  await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
